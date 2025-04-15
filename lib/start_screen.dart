@@ -1,27 +1,18 @@
 import 'package:flutter/material.dart';
 
-class GradientContainer extends StatelessWidget
+class StartScreen extends StatelessWidget
 {
-  const GradientContainer(this.color1, this.color2, {super.key});
-
-  final Color color1;
-  final Color color2;
+  const StartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(width: 500,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [color1, color2],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-      ),
+    return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset('assets/images/quiz-logo.png',
             width: 300,
+            color: Color.fromARGB(250, 255, 255, 255),
           ),
           SizedBox(height: 80),
           Text('Learn Flutter the fun way!',
@@ -42,6 +33,5 @@ class GradientContainer extends StatelessWidget
         ],
       ),
     );
-
   }
 }
