@@ -11,29 +11,42 @@ class QuestionsScreen extends StatefulWidget {
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
+  var currentQuestionIndex = 0;
+
+  void answerQuestion() {
+    setState(() {
+      currentQuestionIndex++;
+    });
+  }
   @override
   Widget build(context) {
-    final currentQuestion = questions[0];
+    final currentQuestion = questions[currentQuestionIndex];
     return SizedBox(
       width: double.infinity, // Take as much as width can.
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            currentQuestion.text,
-            style: TextStyle(
-              color: Colors.white,
-              //fontSize: 24,
+      child: Container(
+        margin: EdgeInsets.all(40), // Margin between the elements and the phone border.
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Contents on the center of the column.
+          crossAxisAlignment: CrossAxisAlignment.stretch, // The options buttons get stretched widely on x-axis.
+          children: [
+            Text(
+              currentQuestion.text,
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.center, // Question get placed on the center horizontally.
             ),
-          ),
-          SizedBox(height: 30),
-          ...currentQuestion.answers.map((answer) {
-            return AnswerButton(
-              answerText: answer,
-              onTap: () {},
-            );
-          }),
-        ],
+            SizedBox(height: 30),
+            // Question with its possible answer options
+            // .map() returns an iterable.
+            ...currentQuestion.getShuffledAnswers().map((answer) {
+              return AnswerButton(
+                answerText: answer,
+                onTap: answerQuestion, // Next question appears.
+              );
+            }),
+          ],
+        ),
       ),
     );
   }
