@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_quiz/start_screen.dart';
+import 'package:flutter_quiz/quiz.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.deepPurple,
-        body: StartScreen(),
+        body: Quiz(),
       ),
     );
   }

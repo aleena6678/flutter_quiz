@@ -46,13 +46,4 @@ const questions = [
       'Any nested StatefulWidgets are updated',
     ],
   ),
-  QuizQuestions(
-    'How should you update data inside of StatefulWidgets?',
-    [
-      'By calling setState()',
-      'By calling updateData()',
-      'By calling updateUI()',
-      'By calling updateState()',
-    ],
-  ),
 ];

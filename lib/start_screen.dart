@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_quiz/level_selection.dart';
+import 'package:flutter_quiz/questions_screen.dart';
+import 'package:flutter_quiz/quiz.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget
 {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +28,7 @@ class StartScreen extends StatelessWidget
           ),
           SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => LevelSelection()),
-              );
-            },
+            onPressed: startQuiz,
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
