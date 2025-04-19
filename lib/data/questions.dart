@@ -45,14 +45,6 @@ const questions = [
       'The closest StatefulWidget is updated',
       'Any nested StatefulWidgets are updated',
     ],
-  ),QuizQuestions(
-    'Which widget in Flutter is used to create a visual hierarchy of the UI that controls the user interface layout?',
-    [
-      'Scaffold',
-      'MaterialApp',
-      'Widget',
-      'Column',
-    ],
   ),
   QuizQuestions(
     'How should you update data inside of StatefulWidgets?',
@@ -61,14 +53,6 @@ const questions = [
       'By calling updateData()',
       'By calling updateUI()',
       'By calling updateState()',
-    ],
-  ),QuizQuestions(
-    'How does Flutter achieve high performance in rendering?',
-    [
-      'Using Skia for rendering',
-      'Using a JavaScript engine',
-      'Using native device widgets',
-      'Using WebView',
     ],
   ),
 ];
