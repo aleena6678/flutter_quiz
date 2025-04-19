@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_quiz/quiz.dart';
+import 'package:flutter_quiz/level_selection.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget
@@ -28,7 +28,7 @@ class StartScreen extends StatelessWidget
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Quiz()),
+                MaterialPageRoute(builder: (context) => LevelSelection()),
               );
             },
             style: OutlinedButton.styleFrom(

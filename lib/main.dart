@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.deepPurple,
         body: StartScreen(),
       ),
     );
