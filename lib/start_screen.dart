@@ -25,11 +25,16 @@ class StartScreen extends StatelessWidget
           ),
           SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: Quiz(),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Quiz()),
+              );
+            },
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
-            icon: Icon(Icons.arrow_right_alt),
+            // icon: Icon(Icons.arrow_right_alt),
             label: Text('Start Quiz'),
           ),
         ],
