@@ -29,7 +29,7 @@ class ResultsScreen extends StatelessWidget {
     // 'where()' returns an iterable and do not change the type as in map().
     final numCorrectQuestions = summaryData.where((data) {
       return data['user_answer'] == data['correct_answer'];
-    });
+    }).length;
 
     return SizedBox(
       width: double.infinity,
