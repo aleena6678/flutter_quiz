@@ -18,9 +18,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   var currentQuestionIndex = 0;
 
   void answerQuestion(String selectedAnswer) {
-    widget.onSelectAnswer( // widget. helps to access the properties of the parent widget.
-        questions[currentQuestionIndex].answers[0]
-    );
+    widget.onSelectAnswer(selectedAnswer);
+    // widget. helps to access the properties of the parent widget.
+
     setState(() {
       currentQuestionIndex++;
     });
